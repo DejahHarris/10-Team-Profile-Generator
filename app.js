@@ -86,14 +86,28 @@ function lesserEmployeeData() {
             name: "newEmployee",
             message: "Would you like to add another team member?" 
         }
-    ]).then(answers => {
-        //push intern into team array
-        if (answers.employeeRole === "Intern") {
-            const employee = new Intern(answers.employeeName, answers.employeeId, answers.employeeEmail, answers.school);
-            teamMembers.push(employee);
-        } else if (answers.employeeRole === "Engineer") {
-            teamMembers.push(new Engineer(answers.employeeName, answers.employeeId, answers.employeeEmail, answers.github));
-        }
-        if (answers.newEmployee === true) {
-            lesserEmployeeData();
-        } else {
+    ]).then((answers)=>{
+        let intern = new Intern(answers.name, answers.id, answers.email,answers.school);
+        team.splice(team.length-1,0,intern.getHTML());
+        buildTeam();
+      })
+    }
+
+    return printHTML(team);
+  ;
+
+function printHTML(team){
+  fs.writeFile("Team.html",team, (err) => {
+    if(err) {
+      throw err;
+    };
+    console.log("Your team has been constructed!");
+  });
+  open("Team.html");
+  };
+  initalize()
+  .then((answers)=>{
+    const manager = new Manager(answers.name, answers.id, answers.email,answers.officeNumber);
+    team.splice(team.length-1,0,manager.getHTML());
+    buildTeam();
+  });
