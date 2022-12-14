@@ -4,7 +4,7 @@ For challenge 10, I built a Node.js command-line application that takes in infor
 
 # Usage
 ![Usage](/images/Screenshot%202022-12-13%20at%207.02.56%20PM.png "Screenshot 1")
-[![Watch the video](https://github.com/DejahHarris/10-Team-Profile-Generator)]
+[![Watch the video](https://drive.google.com/file/d/1xJCxoK1faFfYpuGch7UAmRTgb74m1K0b/view)]
 # Links
 Repo: https://github.com/DejahHarris/10-Team-Profile-Generator
-Walkthrough Video: https://github.com/DejahHarris/10-Team-Profile-Generator
+Walkthrough Video: https://drive.google.com/file/d/1xJCxoK1faFfYpuGch7UAmRTgb74m1K0b/view
